@@ -4,7 +4,7 @@ import React from 'react';
 const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Home Screen</Text>
+      <Text style={styles.Text}>Home Screen</Text>
     </View>
   );
 };
@@ -14,5 +14,9 @@ export default Home;
 const styles = StyleSheet.create({
   container: {
     padding: 24,
+  },
+  Text: {
+    fontFamily: 'RubikDoodleShadowRegular',
+    fontSize: 20,
   },
 });

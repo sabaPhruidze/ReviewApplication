@@ -4,7 +4,7 @@ import React from 'react';
 const About = () => {
   return (
     <View style={styles.container}>
-      <Text>About</Text>
+      <Text style={styles.Text}>About</Text>
     </View>
   );
 };
@@ -14,5 +14,9 @@ export default About;
 const styles = StyleSheet.create({
   container: {
     padding: 24,
+  },
+  Text: {
+    fontFamily: 'NunitoBold',
+    fontSize: 20,
   },
 });
