@@ -1,22 +1,12 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-
+import {GlobalStyles} from '../styles/Global';
 const About = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.Text}>About</Text>
+    <View style={GlobalStyles.container}>
+      <Text style={GlobalStyles.text}>About</Text>
     </View>
   );
 };
 
 export default About;
-
-const styles = StyleSheet.create({
-  container: {
-    padding: 24,
-  },
-  Text: {
-    fontFamily: 'NunitoBold',
-    fontSize: 20,
-  },
-});
