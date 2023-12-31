@@ -1,15 +1,14 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 import Home from './screens/Home';
-import About from './screens/About';
-import ReviewDetails from './screens/ReviewDetails';
+import HomeStack from './routes/HomeStack';
+import {NavigationContainer} from '@react-navigation/native';
+// import HomeStack from './routes/HomeStack';
 const App = () => {
   return (
-    <View>
-      <Home />
-      <About />
-      <ReviewDetails />
-    </View>
+    <NavigationContainer>
+      <HomeStack />
+    </NavigationContainer>
   );
 };
 
