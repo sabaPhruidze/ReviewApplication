@@ -4,6 +4,7 @@ import {GlobalStyles} from '../styles/Global';
 const Home = ({navigation}: {navigation: any}) => {
   const pressHandler = () => {
     navigation.navigate('ReviewDetails');
+    // navigation.push('ReviewDetails');
   };
 
   return (
