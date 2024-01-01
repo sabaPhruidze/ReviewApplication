@@ -1,12 +1,22 @@
-import {View, Text, StyleSheet, Button} from 'react-native';
+import {View, Text, FlatList} from 'react-native';
 import React, {useState} from 'react';
 import {GlobalStyles} from '../styles/Global';
-const Home = ({navigation}: {navigation: any}) => {
-  const pressHandler = () => {
-    navigation.navigate('ReviewDetails');
-    // navigation.push('ReviewDetails');
-  };
-  const [reviews, setReviews] = useState([
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {StackNavigationProp} from '@react-navigation/stack';
+export interface Reviews {
+  title: string;
+  rating: number;
+  body: string;
+  key: string;
+}
+
+function Home({navigation}: {navigation: StackNavigationProp<any>}) {
+  // const pressHandler = () => {
+  //   navigation.navigate('ReviewDetails');
+  //   // navigation.push('ReviewDetails');
+  // };
+
+  const [reviews, setReviews] = useState<Reviews[]>([
     {
       title: 'Zelda, Breath of Fresh Air',
       rating: 5,
@@ -23,10 +33,17 @@ const Home = ({navigation}: {navigation: any}) => {
   ]);
   return (
     <View style={GlobalStyles.container}>
-      <Text style={GlobalStyles.text}>Home Screen</Text>
-      <Button title="Go to review dots" onPress={pressHandler} />
+      <FlatList
+        data={reviews}
+        renderItem={({item}) => (
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ReviewDetails', item)}>
+            <Text style={GlobalStyles.text}>{item.title}</Text>
+          </TouchableOpacity>
+        )}
+      />
     </View>
   );
-};
+}
 
 export default Home;

@@ -1,13 +1,14 @@
-import {View, Text} from 'react-native';
 import React from 'react';
-import Home from './screens/Home';
-import HomeStack from './routes/HomeStack';
 import {NavigationContainer} from '@react-navigation/native';
-// import HomeStack from './routes/HomeStack';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import HomeStack from './routes/HomeStack'; // Adjust the path based on your project structure
+
 const App = () => {
   return (
     <NavigationContainer>
-      <HomeStack />
+      <GestureHandlerRootView>
+        <HomeStack />
+      </GestureHandlerRootView>
     </NavigationContainer>
   );
 };
