@@ -6,7 +6,7 @@ import HomeStack from './routes/HomeStack'; // Adjust the path based on your pro
 const App = () => {
   return (
     <NavigationContainer>
-      <GestureHandlerRootView>
+      <GestureHandlerRootView style={{flex: 1}}>
         <HomeStack />
       </GestureHandlerRootView>
     </NavigationContainer>
