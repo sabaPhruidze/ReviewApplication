@@ -1,11 +1,13 @@
 import 'react-native-gesture-handler';
+import 'react-native-reanimated';
 import React from 'react';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import HomeStack from './routes/HomeStack'; // Adjust the path based on your project structure
+import HomeStack from './routes/HomeStack';
 import AboutStack from './routes/AboutStack';
 import Drawer from './routes/Drawer';
+
 const App = () => {
   return (
     <NavigationContainer>
