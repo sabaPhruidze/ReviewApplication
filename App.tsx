@@ -1,21 +1,20 @@
-import 'react-native-gesture-handler';
-import 'react-native-reanimated';
 import React from 'react';
+import {SafeAreaView} from 'react-native';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import {GestureHandlerRootView} from 'react-native-gesture-handler';
+// import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import HomeStack from './routes/HomeStack';
 import AboutStack from './routes/AboutStack';
 import Drawer from './routes/Drawer';
 
 const App = () => {
   return (
-    <NavigationContainer>
+    <SafeAreaView>
       <StatusBar backgroundColor="#eee" barStyle="dark-content" />
-      <GestureHandlerRootView style={{flex: 1}}>
+      <NavigationContainer>
         <Drawer />
-      </GestureHandlerRootView>
-    </NavigationContainer>
+      </NavigationContainer>
+    </SafeAreaView>
   );
 };
 
