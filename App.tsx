@@ -1,20 +1,19 @@
 import React from 'react';
-import {SafeAreaView} from 'react-native';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-// import {GestureHandlerRootView} from 'react-native-gesture-handler';
-import HomeStack from './routes/HomeStack';
-import AboutStack from './routes/AboutStack';
-import Drawer from './routes/Drawer';
+import {SafeAreaProvider, SafeAreaView} from 'react-native-safe-area-context';
+import DrawerStart from './routes/Drawer';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <StatusBar backgroundColor="#eee" barStyle="dark-content" />
-      <NavigationContainer>
-        <Drawer />
-      </NavigationContainer>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={{flex: 1}}>
+        <StatusBar backgroundColor="#eee" barStyle="dark-content" />
+        <NavigationContainer>
+          <DrawerStart />
+        </NavigationContainer>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 

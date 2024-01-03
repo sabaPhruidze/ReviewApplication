@@ -13,6 +13,7 @@ const ScreenOptions = {
     fontSize: 24,
   },
   headerTintColor: '#444',
+  headerShown: false
 };
 
 function AboutStack() {
