@@ -5,7 +5,6 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 import {StackNavigationProp} from '@react-navigation/stack';
 export interface Reviews {
   title: string;
-  rating: number;
   body: string;
   key: string;
 }
@@ -18,18 +17,30 @@ function Home({navigation}: {navigation: StackNavigationProp<any>}) {
 
   const [reviews, setReviews] = useState<Reviews[]>([
     {
-      title: 'Zelda, Breath of Fresh Air',
-      rating: 5,
-      body: 'lorem ipsum',
+      title: 'Law of Attraction',
+      body: "The belief that thoughts and emotions can attract positive or negative experiences into one's life. Your mindset shapes your reality.",
       key: '1',
     },
     {
-      title: 'Gotta Catch Them All (again)',
-      rating: 4,
-      body: 'lorem ipsum',
+      title: 'Positive Thinking',
+      body: ' Emphasizes the importance of focusing on positive thoughts and emotions to manifest desired outcomes.',
       key: '2',
     },
-    {title: 'Not So "Final" Fantasy', rating: 3, body: 'lorem ipsum', key: '3'},
+    {
+      title: 'Visualization',
+      body: ' The act of imagining and visualizing goals as a powerful tool for bringing them into reality.',
+      key: '3',
+    },
+    {
+      title: 'Affirmations',
+      body: 'Positive statements and beliefs repeated to encourage a positive mindset and attract corresponding experiences.',
+      key: '4',
+    },
+    {
+      title: 'Gratitude Practices',
+      body: ' Expressing gratitude for what you have attracts more positive experiences.',
+      key: '5',
+    },
   ]);
   return (
     <View style={GlobalStyles.container}>
